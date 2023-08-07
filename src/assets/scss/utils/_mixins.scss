@@ -1,0 +1,33 @@
+@import "./variables";
+
+@mixin card {
+    max-width: 400px;
+    height: 400px;
+    width: 100%;
+    border-radius: 14px;
+    background: $white;
+    background-color: #ffffff1b;
+}
+
+@mixin button {
+    width: 100%;
+    max-width: 80px;
+    padding: 3px 10px;
+    color: $white;
+    background: #5983dc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+@mixin input {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    max-width: 200px;
+    width: 100%;
+    margin-right: 5%;
+}

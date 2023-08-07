@@ -1,0 +1,84 @@
+@import"../utils/mixins";
+
+.card {
+    @include card;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    &_blocks {
+        padding:20px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &_block-left {
+        display: grid;
+        align-items: center;
+    }
+
+    &_block-right {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+    }
+}
+
+.type_weather {
+    font-size: calc(16px + 8 * (100vw / 1440));
+    font-weight: 500;
+}
+
+.temperature {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.search {
+    @include button;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}
+
+.input {
+    @include input;
+}
+
+img {
+    width: 100%;
+    background-position: center;
+    overflow: hidden;
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.country {
+    font-size: calc(20px + 12 * (100vw / 1440));
+    text-align: center;
+}
+
+@media (min-width:1440px) {
+    .type_weather {
+        font-size: 24px;
+    }
+
+    .country {
+        font-size: 32px;
+    }
+}
